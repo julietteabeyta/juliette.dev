@@ -1,33 +1,67 @@
+@font-face {
+    font-family: 'Salome';
+    src: url('./fonts/Salome/salome-webfont.eot');
+    src: url('./fonts/Salome/salome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Salome/salome-webfont.woff') format('woff'),
+         url('./fonts/Salome/salome-webfont.ttf') format('truetype'),
+         url('./fonts/Salome/salome-webfont.svg#Salome') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
 .App {
   text-align: center;
+  background: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.headshot{
+  height: 25vh;
+  -webkit-mask-image:-webkit-gradient(radial, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
-.App-header {
-  background-color: #282c34;
+.header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 3vmin);
+  font-family: 'Salome', sans-serif;
+  text-transform: lowercase;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.name{
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  font-size: calc(10px + 1.2vmin);
+  padding: 0 6px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.nav {
+  display: grid;
+  grid-row: span 1 / -1;
+  justify-self: end;
+  grid-column: span 1 / -1;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 110%;
+  max-width: 400px;
+  margin-top: 5px;
+  justify-items: center;
+  border-top: 3px solid white;
+}
+
+.nav-link img{
+  height: 25px;
+}
+
+.nav-link img:hover,
+.nav-link img:focus {
+  transform: scale(1.5);
+  transition: .2s ease-in-out;
 }
