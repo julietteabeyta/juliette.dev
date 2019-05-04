@@ -9,9 +9,13 @@
     font-weight: normal;
 }
 
-.App {
+.app {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1fr;
   text-align: center;
   background: black;
+  height: 100vh;
 }
 
 .headshot{
@@ -21,7 +25,6 @@
 }
 
 .header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,18 +35,12 @@
   color: white;
 }
 
-.name{
-  z-index: 1;
-}
-
 .title{
   font-size: calc(10px + 1.2vmin);
-  padding: 0 6px;
-  border-radius: 5px;
   margin-bottom: 10px;
 }
 
-.nav {
+.external-nav {
   display: grid;
   grid-row: span 1 / -1;
   justify-self: end;
@@ -64,4 +61,22 @@
 .nav-link img:focus {
   transform: scale(1.5);
   transition: .2s ease-in-out;
+}
+
+.internal-nav {
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr;
+  width: 110%;
+  max-width: 400px;
+  margin-top: 5px;
+  justify-items: center;
+}
+
+.route{
+  text-decoration: none;
+  background: white;
+  color: black;
+  height: 45px;
+  width: 55px;
 }
