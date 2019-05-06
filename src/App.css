@@ -1,14 +1,3 @@
-@font-face {
-    font-family: 'Salome';
-    src: url('./fonts/Salome/salome-webfont.eot');
-    src: url('./fonts/Salome/salome-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Salome/salome-webfont.woff') format('woff'),
-         url('./fonts/Salome/salome-webfont.ttf') format('truetype'),
-         url('./fonts/Salome/salome-webfont.svg#Salome') format('svg');
-    font-style: normal;
-    font-weight: normal;
-}
-
 .app {
   display: grid;
   grid-template-rows: 3fr 1fr;
@@ -18,10 +7,12 @@
   height: 100vh;
 }
 
-.headshot{
-  height: 25vh;
-  -webkit-mask-image:-webkit-gradient(radial, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  mask-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+
+.page{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
 }
 
 .header {
@@ -30,9 +21,16 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 3vmin);
-  font-family: 'Salome', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
   text-transform: lowercase;
   color: white;
+}
+
+.headshot{
+  height: 25vh;
+  -webkit-mask-image:-webkit-gradient(radial, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 .title{
@@ -79,4 +77,25 @@
   color: black;
   height: 45px;
   width: 55px;
+}
+
+.fade-appear,
+.fade-enter{
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active{
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit{
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active{
+  opacity:0;
+  transition: opacity 150ms linear;
 }

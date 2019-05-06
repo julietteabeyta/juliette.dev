@@ -5,9 +5,9 @@ class Skills extends Component {
 
   render() {
     return (
-      <div className="skills">
+      <div className="skills page">
         <Link to="/" className="route">
-          <p>WORLD!!!!!</p>
+          <p>Hello</p>
         </Link>
       </div>
     );
