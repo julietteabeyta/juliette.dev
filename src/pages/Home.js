@@ -4,7 +4,7 @@ import codepen from '../images/codepen.svg';
 import github from '../images/github.svg';
 import linkedIn from '../images/linkedIn.svg';
 import twitter from '../images/twitter.svg';
-import '../styles/App.css';
+import '../styles/App.scss';
 
 class App extends Component {
 

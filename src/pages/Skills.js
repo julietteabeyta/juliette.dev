@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/Skills.css';
+import '../styles/Skills.scss';
 class Skills extends Component {
 
   render() {

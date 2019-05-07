@@ -1,0 +1,38 @@
+.skills{
+  grid-template-rows:20vh auto;
+}
+
+.skills-container{
+  display: grid;
+  grid-template-rows: .5fr .7fr 1fr;
+  align-self: start;
+}
+
+h3{
+  display: inline-block;
+  position: relative;
+  &::after{
+    content: '';
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-bottom: 3px solid yellow;
+    transform: scaleX(0);
+    transition: .2s ease;
+  }
+}
+
+.skills-languages:hover,
+.skills-frameworks:hover,
+.skills-miscellaneous:hover{
+  h3::after{
+    transform: scaleX(1);
+  }
+}
+
+
+.skills-container li{
+  list-style: none;
+}

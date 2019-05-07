@@ -58,29 +58,27 @@ html{
   position: relative;
   margin-bottom: 30px;
   animation: cardcolor 20s ease-in-out infinite alternate;
-}
-
-.name:hover::after{
-  content: 'welcome \A please explore and enjoy';
-  display: block;
-  white-space: pre;
-  opacity:1;
-}
-
-.name::after{
-  content: 'juliette \A designer//developer';
-  display: block;
-  white-space: pre;
-  font-size: calc(10px + 1.2vmin);
-  color: black;
-  text-align: right;
-  background: white;
-  position: absolute;
-  padding-top: 15px;
-  height: 18%;
-  width: 100%;
-  bottom: 0px;
-  right: 0px;
+  &:hover::after{
+    content: 'welcome \A please explore and enjoy';
+    display: block;
+    white-space: pre;
+    opacity:1;
+  }
+  &::after{
+    content: 'juliette \A designer//developer';
+    display: block;
+    white-space: pre;
+    font-size: calc(10px + 1.2vmin);
+    color: black;
+    text-align: right;
+    background: white;
+    position: absolute;
+    padding-top: 15px;
+    height: 18%;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+  }
 }
 
 .external-nav {
@@ -97,11 +95,10 @@ html{
 .nav-link img{
   height: 3vmin;
   transition: .5s ease;
-}
-
-.nav-link img:hover,
-.nav-link img:focus {
-  transform: scale(1.5);
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
 }
 
 .route{
