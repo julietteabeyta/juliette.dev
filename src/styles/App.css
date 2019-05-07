@@ -17,8 +17,12 @@ html{
   position: absolute;
   left: 0;
   right: 0;
-  top: 100px;
   color: white;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-bar{
@@ -30,6 +34,7 @@ html{
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  z-index: 10;
 }
 
 .header {
@@ -52,40 +57,26 @@ html{
   border: 2px solid white;
   position: relative;
   margin-bottom: 30px;
-
-}
-
-.name:hover::before{
-  content: 'please explore and enjoy';
-  opacity:1;
+  animation: cardcolor 20s ease-in-out infinite alternate;
 }
 
 .name:hover::after{
-  content: 'welcome';
+  content: 'welcome \A please explore and enjoy';
+  display: block;
+  white-space: pre;
   opacity:1;
-}
-.name::before{
-  content: 'designer//developer';
-  color: black;
-  text-align: right;
-  font-size: calc(10px + 1vmin);
-  font-weight: normal;
-  background: white;
-  position: absolute;
-  width: 100%;
-  bottom: calc(10px);
-  z-index: 12;
-  right: 0px;
 }
 
 .name::after{
-  content: 'juliette';
-  font-size: calc(10px + 1.5vmin);
+  content: 'juliette \A designer//developer';
+  display: block;
+  white-space: pre;
+  font-size: calc(10px + 1.2vmin);
   color: black;
   text-align: right;
   background: white;
   position: absolute;
-  padding-top: 10px;
+  padding-top: 15px;
   height: 18%;
   width: 100%;
   bottom: 0px;
@@ -139,4 +130,40 @@ html{
 .fade-exit.fade-exit-active{
   opacity:0;
   transition: opacity 150ms linear;
+}
+
+@keyframes cardcolor {
+  0%{
+    background: #DE413A;  
+  }
+  10%{
+    background: #5B2C36;
+  }
+  20%{
+    background: #EBCDD5;
+  }
+  30%{
+    background: #C58F69;
+  }
+  40%{
+    background: #233B5C;
+  }
+  50%{
+    background: #8F9190;
+  }
+  60%{
+    background: #0A585C;
+  }
+  70%{
+    background: #9A9740;
+  }
+  80%{
+    background: #5285C4;
+  }
+  90%{
+    background: #C26224;
+  }
+  100%{
+    background: #9D789A;
+  }
 }

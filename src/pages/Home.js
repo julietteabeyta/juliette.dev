@@ -4,18 +4,15 @@ import codepen from '../images/codepen.svg';
 import github from '../images/github.svg';
 import linkedIn from '../images/linkedIn.svg';
 import twitter from '../images/twitter.svg';
-import '../App.css';
+import '../styles/App.css';
 
 class App extends Component {
 
   render() {
-    let colors = ["#DE413A", "#5B2C36", "#EBCDD5", "#C58F69", "#233B5C", "#8F9190", "#0A585C", "#9A9740", "#5285C4", "#C26224"];
-    let hex = colors[Math.round(Math.random()*colors.length)];
-
     return (
       <div className="app">
         <header className="header">
-          <div className="name" style={{background: hex}}/>
+          <div className="name"/>
           <div className="external-nav">
             <a
               className="nav-link"

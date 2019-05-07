@@ -1,0 +1,13 @@
+.skills{
+  grid-template-rows:20vh auto;
+}
+
+.skills-container{
+  display: grid;
+  grid-template-rows: .5fr 1fr 3fr;
+  align-self: start;
+}
+
+.skills-container li{
+  list-style: none;
+}
