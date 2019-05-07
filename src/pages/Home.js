@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import headshot from '../images/headshot.jpg';
 import atSymbol from '../images/atSymbol.svg';
 import codepen from '../images/codepen.svg';
 import github from '../images/github.svg';
@@ -11,12 +9,13 @@ import '../App.css';
 class App extends Component {
 
   render() {
+    let colors = ["#DE413A", "#5B2C36", "#EBCDD5", "#C58F69", "#233B5C", "#8F9190", "#0A585C", "#9A9740", "#5285C4", "#C26224"];
+    let hex = colors[Math.round(Math.random()*colors.length)];
+
     return (
       <div className="app">
         <header className="header">
-          <img src={headshot} className="headshot" alt="juliette-headshot" />
-          <div className="name">Juliette</div>
-          <div className="title">Developer//designer</div>
+          <div className="name" style={{background: hex}}/>
           <div className="external-nav">
             <a
               className="nav-link"
@@ -60,18 +59,6 @@ class App extends Component {
             </a>
           </div>
         </header>
-        <div>
-          <Link to="/skills" className="route">
-            <button>
-                <p>Skills</p>
-            </button>
-          </Link>
-          <Link to="/about" className="route">
-            <button>
-              <p>About</p>
-            </button>
-          </Link>
-        </div>
       </div>
     );
   }

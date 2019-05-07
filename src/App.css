@@ -1,18 +1,33 @@
+html{
+  background: black;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  height: 100vh;
+}
+
 .app {
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
   text-align: center;
-  background: black;
   height: 100vh;
 }
-
 
 .page{
   position: absolute;
   left: 0;
   right: 0;
   top: 100px;
+  color: white;
+}
+
+.nav-bar{
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 .header {
@@ -21,21 +36,58 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 3vmin);
-  font-family: 'Helvetica', sans-serif;
-  font-weight: bold;
   text-transform: lowercase;
-  color: white;
-}
-
-.headshot{
-  height: 25vh;
-  -webkit-mask-image:-webkit-gradient(radial, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  mask-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 .title{
   font-size: calc(10px + 1.2vmin);
   margin-bottom: 10px;
+}
+
+.name{
+  height: 37vmin;
+  width: 35vmin;
+  border: 2px solid white;
+  position: relative;
+  margin-bottom: 30px;
+
+}
+
+.name:hover::before{
+  content: 'please explore and enjoy';
+  opacity:1;
+}
+
+.name:hover::after{
+  content: 'welcome';
+  opacity:1;
+}
+.name::before{
+  content: 'designer//developer';
+  color: black;
+  text-align: right;
+  font-size: calc(10px + 1vmin);
+  font-weight: normal;
+  background: white;
+  position: absolute;
+  width: 100%;
+  bottom: calc(10px);
+  z-index: 12;
+  right: 0px;
+}
+
+.name::after{
+  content: 'juliette';
+  font-size: calc(10px + 1.5vmin);
+  color: black;
+  text-align: right;
+  background: white;
+  position: absolute;
+  padding-top: 10px;
+  height: 18%;
+  width: 100%;
+  bottom: 0px;
+  right: 0px;
 }
 
 .external-nav {
@@ -44,37 +96,24 @@
   justify-self: end;
   grid-column: span 1 / -1;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 110%;
-  max-width: 400px;
+  width: 45vmin;
   margin-top: 5px;
   justify-items: center;
-  border-top: 3px solid white;
 }
 
 .nav-link img{
-  height: 25px;
+  height: 3vmin;
+  transition: .5s ease;
 }
 
 .nav-link img:hover,
 .nav-link img:focus {
   transform: scale(1.5);
-  transition: .2s ease-in-out;
-}
-
-.internal-nav {
-  display: grid;
-  justify-self: center;
-  grid-template-columns: 1fr 1fr;
-  width: 110%;
-  max-width: 400px;
-  margin-top: 5px;
-  justify-items: center;
 }
 
 .route{
   text-decoration: none;
-  background: white;
-  color: black;
+  color: white;
   height: 45px;
   width: 55px;
 }
