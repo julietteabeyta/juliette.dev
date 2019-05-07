@@ -8,7 +8,6 @@ html{
 
 .app {
   display: grid;
-  grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
   text-align: center;
   height: 100vh;
@@ -23,7 +22,10 @@ html{
 }
 
 .nav-bar{
-  width: 100vw;
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: 50%;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -34,7 +36,7 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 20vh;
   font-size: calc(10px + 3vmin);
   text-transform: lowercase;
 }
