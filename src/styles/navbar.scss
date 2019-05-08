@@ -10,21 +10,31 @@
   z-index: 10;
 }
 
-.nav-link{
+.route{
   display: inline-block;
   position: relative;
   &::after{
     content: '';
     height: 100%;
     position: absolute;
-    border-right: 2px solid yellow;
-    top: 0;
-    left: 6px;
+    border-right: 3px solid yellow;
+    top: -1px;
+    left: 22px;
     transform: scaleY(0);
-    transition: .2s ease;
+    transition: .45s ease;
   }
 }
 
-.nav-link:hover::after{
-  transform: scaleY(1);
+.nav-link{
+  transition: .2s ease;
 }
+
+.route:hover{
+  .nav-link{
+    transform: scale(1.1);
+  }
+}
+
+.active::after{
+    transform: scaleY(1);
+  }
