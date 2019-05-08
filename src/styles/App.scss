@@ -25,18 +25,6 @@ html{
   justify-content: center;
 }
 
-.nav-bar{
-  position: absolute;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  height: 50%;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  z-index: 10;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -92,9 +80,9 @@ html{
   justify-items: center;
 }
 
-.nav-link img{
+.ext-nav-link img{
   height: 3vmin;
-  transition: .5s ease;
+  transition: .3s ease;
   &:hover,
   &:focus {
     transform: scale(1.5);

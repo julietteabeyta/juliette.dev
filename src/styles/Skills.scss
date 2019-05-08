@@ -1,11 +1,10 @@
-.skills{
-  grid-template-rows:20vh auto;
-}
-
 .skills-container{
   display: grid;
   grid-template-rows: .5fr .7fr 1fr;
   align-self: start;
+  margin-top: 12vh;
+  margin-left: -20vw;
+  justify-self: start;
 }
 
 h3{

@@ -1,0 +1,30 @@
+.nav-bar{
+  position: absolute;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  height: 50%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  z-index: 10;
+}
+
+.nav-link{
+  display: inline-block;
+  position: relative;
+  &::after{
+    content: '';
+    height: 100%;
+    position: absolute;
+    border-right: 2px solid yellow;
+    top: 0;
+    left: 6px;
+    transform: scaleY(0);
+    transition: .2s ease;
+  }
+}
+
+.nav-link:hover::after{
+  transform: scaleY(1);
+}

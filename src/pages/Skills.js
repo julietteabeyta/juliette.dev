@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import '../styles/Skills.scss';
+import '../styles/skills.scss';
 class Skills extends Component {
 
   render() {
     return (
       <div className="skills page">
-        I currently function as a full-stack developer and these are all the things I play with!
         <div className="skills-container">
           <div className="skills-languages">
             <h3>Languages</h3>
