@@ -18,13 +18,13 @@ class NavBar extends Component {
   render() {
     return (
       <div className="nav-bar">
-        <Link to="/about" className="route" onClick={(e) => this.handleClick(e)}>
-          <p className="nav-link" >about</p>
-        </Link>
         <Link to="/skills" className="route" onClick={(e) => this.handleClick(e)}>
           <p className="nav-link" >skills</p>
         </Link>
-        <Link to="/" className="route active" onClick={(e) => this.handleClick(e)}>
+        <Link to="/about" className="route" onClick={(e) => this.handleClick(e)}>
+          <p className="nav-link" >about</p>
+        </Link>
+        <Link to="/" className="route" onClick={(e) => this.handleClick(e)}>
           <p className="nav-link" >home</p>
         </Link>
       </div>

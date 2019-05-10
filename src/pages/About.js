@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import ReactSVG from 'react-svg'
+import '../styles/about.scss';
 
 class About extends Component {
 
   render() {
+
+    const svgPath = 'juliette.svg';
+
     return (
       <div className="about page">
-        <Link to="/" className="route">
-          <p>WORLD!!!!!</p>
-        </Link>
+          <ReactSVG className="juliette-svg"src={svgPath}/>
       </div>
     );
   }
