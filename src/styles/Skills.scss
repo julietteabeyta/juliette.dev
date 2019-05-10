@@ -2,21 +2,22 @@
   display: grid;
   grid-template-rows: .5fr .7fr 1fr;
   align-self: start;
-  margin-top: 12vh;
-  margin-left: -20vw;
-  justify-self: start;
+  position: absolute;
+  top: 10%;
+  left: 20%;
 }
 
 h3{
   display: inline-block;
   position: relative;
+  text-transform: uppercase;
   &::after{
     content: '';
     height: 10px;
     width: 100%;
     position: absolute;
     left: 0;
-    top: 1px;
+    bottom: 0;
     border-bottom: 3px solid yellow;
     transform: scaleX(0);
     transition: .1s ease;
@@ -31,7 +32,12 @@ h3{
   }
 }
 
-
 .skills-container li{
   list-style: none;
+}
+
+@media screen and (min-width: 540px){
+  .skills-container{
+    left: 15%;
+  }
 }

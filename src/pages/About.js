@@ -11,8 +11,9 @@ class About extends Component {
     return (
       <div className="about page">
         <div className="about-container">
+          <h3>Hey. It's me, Juliette.</h3>
           <p>
-            Hey! It's me, Juliette; your average role-playing, coffee-drinking lover of all things horror.
+            I am your average role-playing, coffee-drinking lover of all things horror.
             I currently manage a full-stack development team focusing on writing stellar code and perpetuating
             an inclusive, supportive culture. As a developer, I have a passion for building seamless
             interactions and creating useful, beautiful digital experiences.
