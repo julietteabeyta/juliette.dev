@@ -5,6 +5,10 @@
 
 a{
   color: yellow;
+  transition: .2s ease;
+  &:hover{
+    opacity: .6;
+  }
 }
 
 svg{

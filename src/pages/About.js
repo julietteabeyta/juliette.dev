@@ -20,7 +20,7 @@ class About extends Component {
           <br/>
           <p>
             In addition to development, I enjoy good books, riding fixed gear bikes around the city, and long walks on the beach.
-            And I am always looking to connect! You can connect with me on <a href="https://twitter.com/julietteabeyta" target="_blank" rel="noopener noreferrer">twitter</a> or shoot me an email <a href="mailto:julietteabeyta@gmail.com" target="_blank" rel="noopener noreferrer">here.</a>
+            And I am always looking to connect! You can connect with me on <a href="https://twitter.com/julietteabeyta" target="_blank" rel="noopener noreferrer">twitter</a> or shoot me an email <a href="mailto:julietteabeyta@gmail.com" rel="noopener noreferrer">here.</a>
           </p>
         </div>
         <ReactSVG className="juliette-svg"src={svgPath}/>
