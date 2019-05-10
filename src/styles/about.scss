@@ -1,3 +1,12 @@
+.about-container{
+  width: 55vmin;
+  padding-top: 25vmin;
+}
+
+a{
+  color: yellow;
+}
+
 svg{
   height: 45vmin;
   position: absolute;
@@ -8,7 +17,7 @@ svg{
 path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 3s linear forwards;
+  animation: dash 2.5s linear forwards;
 }
 
 @keyframes dash {
