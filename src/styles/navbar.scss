@@ -1,5 +1,6 @@
 .nav-bar{
   position: absolute;
+  left: 0;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   height: 50%;
@@ -14,15 +15,8 @@
 .route{
   display: inline-block;
   position: relative;
-  &::after{
-    content: '';
-    height: 100%;
-    position: absolute;
-    border-right: 3px solid yellow;
-    top: -1px;
-    left: 22px;
-    transform: scaleY(0);
-    transition: .45s ease;
+  &.active{
+    color: yellow;
   }
 }
 
@@ -35,7 +29,3 @@
     transform: scale(1.1);
   }
 }
-
-.active::after{
-    transform: scaleY(1);
-  }
