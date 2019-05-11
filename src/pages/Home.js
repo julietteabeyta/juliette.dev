@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactSVG from 'react-svg'
+
 import atSymbol from '../images/atSymbol.svg';
 import codepen from '../images/codepen.svg';
 import github from '../images/github.svg';
@@ -7,12 +9,15 @@ import twitter from '../images/twitter.svg';
 import '../styles/app.scss';
 
 class App extends Component {
-
+  
+  
   render() {
+    const svgPath = 'juliette.svg';
     return (
       <div className="app">
         <header className="header">
-          <div className="name">JU<br/>LIE<br/>TTE</div>
+          <ReactSVG className="juliette-svg" src={svgPath} />
+          <div className="title">juliette<br/>developer//designer</div>
           <div className="external-nav">
             <a
               className="ext-nav-link"

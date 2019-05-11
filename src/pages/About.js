@@ -24,7 +24,6 @@ class About extends Component {
             And I am always looking to connect! You can connect with me on <a href="https://twitter.com/julietteabeyta" target="_blank" rel="noopener noreferrer">twitter</a> or shoot me an email <a href="mailto:julietteabeyta@gmail.com" rel="noopener noreferrer">here.</a>
           </p>
         </div>
-        <ReactSVG className="juliette-svg"src={svgPath}/>
       </div>
     );
   }
