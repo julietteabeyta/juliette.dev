@@ -10,6 +10,10 @@ html{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  position: absolute;
+  justify-content: center;
+  left: 0;
+  right: 0;
 }
 
 .page{
