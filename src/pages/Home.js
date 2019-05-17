@@ -6,6 +6,9 @@ import codepen from '../images/codepen.svg';
 import github from '../images/github.svg';
 import linkedIn from '../images/linkedIn.svg';
 import twitter from '../images/twitter.svg';
+import NavBar from '../components/Navigation';
+import About from '../pages/About';
+import Skills from '../pages/Skills';
 import '../styles/app.scss';
 
 class App extends Component {
@@ -15,6 +18,7 @@ class App extends Component {
     const svgPath = 'juliette.svg';
     return (
       <div className="app">
+        <NavBar />
         <header className="header">
           <ReactSVG className="juliette-svg" src={svgPath} />
           <div className="title">juliette<br/>developer//designer</div>
@@ -61,6 +65,8 @@ class App extends Component {
             </a>
           </div>
         </header>
+        <About />
+        <Skills />
       </div>
     );
   }

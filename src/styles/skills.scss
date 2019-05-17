@@ -1,39 +1,30 @@
-.skills{
-  justify-content: start;
-  padding-left: 20%;
+.skills-container{
+  display: grid;
+}
+
+.skills-parent{
+  width: 60vw;
+}
+
+.skills-section{
+  border-left: 4px solid yellow;
+  padding-left: 15px;
 }
 
 h3{
   display: inline-block;
   position: relative;
-  text-transform: uppercase;
-  &::after{
-    content: '';
-    height: 10px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid yellow;
-    transform: scaleX(0);
-    transition: .1s ease;
-  }
-}
-
-.skills-languages:hover,
-.skills-frameworks:hover,
-.skills-miscellaneous:hover{
-  h3::after{
-    transform: scaleX(1);
-  }
+  margin-top: 0;
 }
 
 .skills-container li{
   list-style: none;
 }
 
+
 @media screen and (min-width: 540px){
   .skills-container{
-    left: 15%;
+    display: grid;
+    grid-template-columns: .8fr 1fr 1fr;
   }
 }

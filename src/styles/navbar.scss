@@ -1,13 +1,18 @@
 .nav-bar{
-  position: absolute;
+  position: fixed;
   left: 0;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  height: 50%;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  height: 25%;
+  ul{
+    display: none;
+    height: 45%;
+    list-style: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    li{
+      opacity: .8;
+      cursor: pointer;
+    }
+  }
   z-index: 10;
   text-transform: uppercase;
 }
@@ -27,5 +32,14 @@
 .route:hover{
   .nav-link{
     transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 540px){
+  .nav-bar ul{
+    display: grid;
+  }
+  img{
+    margin: 25px;
   }
 }
