@@ -1,5 +1,6 @@
 .skills-container{
   display: grid;
+  border-left: 4px solid yellow;
 }
 
 .skills-parent{
@@ -7,8 +8,12 @@
 }
 
 .skills-section{
-  border-left: 4px solid yellow;
   padding-left: 15px;
+}
+
+.skills-languages,
+.skills-frameworks{
+  margin-bottom: 55px;
 }
 
 h3{
@@ -26,5 +31,9 @@ h3{
   .skills-container{
     display: grid;
     grid-template-columns: .8fr 1fr 1fr;
+    border: none;
+  }
+  .skills-section{
+    border-left: 4px solid yellow;
   }
 }

@@ -47,6 +47,7 @@ path {
 }
 
 .title{
+  margin-bottom: 10px;
   opacity: 0;
   animation: fadein 1s linear forwards 2s;
 }
@@ -56,11 +57,13 @@ path {
   grid-row: span 1 / -1;
   grid-column: span 1 / -1;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  width: 69vw;
   margin-top: 5px;
 }
 
 .ext-nav-link img{
-  height: 4vmin;
+  height: 5vmin;
   transition: .3s ease;
   opacity: 0;
   animation: fadein 1s linear forwards 2.5s;
@@ -96,8 +99,21 @@ p, li{
 }
 
 @keyframes dash {
-  to{
+  0%{
+    stroke: white;
+  }
+  25%{
+    stroke: blue;
+  }
+  50%{
+    stroke: red;
+  }
+  75%{
+    stroke: yellow;
+  }
+  100%{
     stroke-dashoffset: 0;
+    stroke: white;
   }
 }
 
@@ -112,7 +128,12 @@ p, li{
   p, li{
     font-size: calc(10px + .7vmin);
   }
-  .ext-nav-link img{
-    height: 3vmin;
+  .external-nav{
+    width: auto;
+  }
+  .ext-nav-link {
+    img{
+      height: 3vmin;
+      }
   }
 }
