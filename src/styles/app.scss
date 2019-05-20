@@ -29,7 +29,6 @@ html{
   justify-content: start;
   align-items: center;
   height: 100vh;
-  font-size: calc(10px + 3vmin);
   text-transform: uppercase;
   text-align: left;
 }
@@ -46,18 +45,34 @@ path {
   animation: dash 2.5s linear forwards;
 }
 
+.title-parent{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name{
+  font-size: calc(10px + 6vmin);
+  animation: fadein 1s linear forwards 2s;
+}
+
 .title{
+  font-size: calc(10px + 3vmin);
+  animation: fadeintitle 1s linear forwards 2.1s;
+}
+
+.name, .title{
   margin-bottom: 10px;
   opacity: 0;
-  animation: fadein 1s linear forwards 2s;
 }
 
 .external-nav {
   display: grid;
   grid-row: span 1 / -1;
   grid-column: span 1 / -1;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   width: 69vw;
   margin-top: 5px;
 }
@@ -97,6 +112,11 @@ p, li{
     opacity: 1;
   }
 }
+@keyframes fadeintitle {
+  to {
+    opacity: .5;
+  }
+}
 
 @keyframes dash {
   0%{
@@ -118,22 +138,70 @@ p, li{
 }
 
 @media screen and (min-width: 540px){
-  .header{
-    height: 90vh;
-  }
-  svg{
-    height: 45vmin;
-    margin-top: 5vh;
-  }
   p, li{
     font-size: calc(10px + .7vmin);
   }
+  svg{
+    height: 30vmin;
+    margin: 10vh 1vw 0 0;
+  }
+  .name{
+    font-size: calc(10px + 3.5vmin);
+  }
+
+  .title{
+    font-size: calc(10px + 1.8vmin);
+  }
+
   .external-nav{
-    width: auto;
+    width: 40vw;
+  }
+  .ext-nav-link {
+    img{
+      margin: 10px 0;
+      height: 4vmin;
+      }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .header{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 35vmin auto;
+    justify-items: center;
+    justify-content: center;
+  }
+  .external-nav{
+    justify-items: start;
+    width: 30vw;
   }
   .ext-nav-link {
     img{
       height: 3vmin;
       }
+  }
+
+  .name{
+    font-size: calc(10px + 6vmin);
+  }
+
+  .title{
+    font-size: calc(10px + 3vmin);
+  }
+
+  svg{
+    height: 35vmin;
+    margin: 5vh 1vw 0 0;
+  }
+  .title-parent{
+    align-items: start;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1440px){
+  .external-nav{
+    width: 20vw;
   }
 }

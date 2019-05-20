@@ -21,7 +21,9 @@ class App extends Component {
         <NavBar />
         <header className="header">
           <ReactSVG className="juliette-svg" src={svgPath} />
-          <div className="title">juliette<br/>developer//designer</div>
+          <div className="title-parent">
+          <div className="name">juliette s. abeyta</div>
+          <div className="title">developer && designer</div>
           <div className="external-nav">
             <a
               className="ext-nav-link"
@@ -63,6 +65,7 @@ class App extends Component {
             >
               <img src={codepen} className="codepen-link" alt="codepen-icon" />
             </a>
+          </div>
           </div>
         </header>
         <About />
