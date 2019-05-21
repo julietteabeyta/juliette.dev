@@ -22,7 +22,7 @@ class App extends Component {
         <header className="header">
           <ReactSVG className="juliette-svg" src={svgPath} />
           <div className="title-parent">
-          <div className="name">juliette s. abeyta</div>
+          <div className="name">juliette abeyta</div>
           <div className="title">developer && designer</div>
           <div className="external-nav">
             <a
