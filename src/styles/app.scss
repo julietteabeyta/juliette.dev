@@ -33,6 +33,16 @@ html{
   text-align: left;
 }
 
+.header-photo{
+  display: grid;
+  grid-template-columns: 25px auto;
+  align-items: center;
+}
+
+.stroke-options{
+  margin-top: 10vh;
+}
+
 svg{
   height: 55vmin;
   margin-top: 10vh;
@@ -40,10 +50,52 @@ svg{
 }
 
 path {
-  stroke: white;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 2.5s linear forwards;
+}
+
+.juliette-svg{
+  &.blue{
+    path{
+      stroke: blue;
+    }
+  }
+  &.red{
+    path{
+      stroke: red;
+    }
+  }
+  &.yellow{
+    path{
+      stroke: yellow;
+    }
+  }
+  &.white{
+    path{
+      stroke: white;
+    }
+  }
+}
+
+.stroke-option{
+  height: 25px;
+  width: 25px;
+  margin: 0 0 3vh -15px;
+  cursor: pointer;
+  &#blue{
+    background: blue;
+  }
+  &#red{
+    background: red;
+  }
+  &#yellow{
+    background: yellow;
+  }
+  &#white{
+    background: white;
+    margin-bottom: 0px;
+  }
 }
 
 .title-parent{
@@ -120,21 +172,21 @@ p, li{
 }
 
 @keyframes dash {
-  0%{
-    stroke: white;
-  }
-  25%{
-    stroke: blue;
-  }
-  50%{
-    stroke: red;
-  }
-  75%{
-    stroke: yellow;
-  }
-  100%{
+  // 0%{
+  //   stroke: white;
+  // }
+  // 25%{
+  //   stroke: blue;
+  // }
+  // 50%{
+  //   stroke: red;
+  // }
+  // 75%{
+  //   stroke: yellow;
+  // }
+  to{
     stroke-dashoffset: 0;
-    stroke: white;
+    // stroke: white;
   }
 }
 
@@ -189,6 +241,10 @@ p, li{
 
   .title{
     font-size: calc(10px + 3vmin);
+  }
+
+  .stroke-options{
+    margin-top:5vh;
   }
 
   svg{

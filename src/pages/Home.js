@@ -12,7 +12,18 @@ import Skills from '../pages/Skills';
 import '../styles/app.scss';
 
 class App extends Component {
+
+  state={
+    stroke: 'white',
+  }
   
+  changeColor(e){
+    let {stroke} = this.state;
+    stroke = e.currentTarget.id;
+    if (stroke){
+      this.setState({ stroke })
+    }
+  }
   
   render() {
     const svgPath = 'juliette.svg';
@@ -20,7 +31,15 @@ class App extends Component {
       <div className="app">
         <NavBar />
         <header className="header">
-          <ReactSVG className="juliette-svg" src={svgPath} />
+          <div className="header-photo">
+            <div className="stroke-options">
+              <div className="stroke-option" id="blue" onClick={(e)=> this.changeColor(e)}></div>
+              <div className="stroke-option" id="red" onClick={(e) => this.changeColor(e)}></div>
+              <div className="stroke-option" id="yellow" onClick={(e) => this.changeColor(e)}></div>
+              <div className="stroke-option" id="white" onClick={(e) => this.changeColor(e)}></div>
+            </div>
+            <ReactSVG className={`juliette-svg ${this.state.stroke}`} src={svgPath}/>
+          </div>
           <div className="title-parent">
           <div className="name">juliette s. abeyta</div>
           <div className="title">developer && designer</div>
